@@ -1,0 +1,26 @@
+include <iostream>
+#include <conio.h>
+ 
+using namespace std;
+ 
+int main()
+{
+    char key = 0;
+ 
+    while (key != 27)
+    {
+        key = _getch();
+        cout << (int)key;
+ 
+        if (key == 0 || key == -32)
+        {
+            key = _getch();
+            cout << ' ' << (int)key;
+        }
+ 
+        cout << endl;
+    }
+ 
+    system("pause");
+    return 0;
+}
